@@ -1,0 +1,39 @@
+.con{
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr;
+    grid-template-rows: 70px 700px 70px;
+    grid-template-areas: 
+    "header header header"
+    "nav main main"
+    "nav footer footer";
+}
+
+.header{
+    grid-area: header;
+    background-color: pink;
+    border: 3px solid #73AD21;
+}
+.cente {
+    margin: auto;
+    width: fit-content;
+  }
+.nav{
+    grid-area: nav;
+    background-color: gray;
+    & ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        & li:last-child{
+            margin-top: auto;
+        }
+    }
+}
+.main{
+    grid-area: main;
+    background-color: yellow;
+}
+.footer{
+    grid-area: footer;
+    background-color: brown;
+}

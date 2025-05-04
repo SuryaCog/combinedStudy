@@ -1,0 +1,11 @@
+<div class="container">
+    <div>
+        <a routerLink="/">back to home</a>
+    </div>
+    <br>
+    <app-child-comp (eData)="getData($event)" [pData]="receivedData"></app-child-comp>
+    <p>Received data in parent: {{receivedData}}</p>
+
+    <a routerLink="unrelatedCompCommu">Unrelated component communication</a>
+</div>
+

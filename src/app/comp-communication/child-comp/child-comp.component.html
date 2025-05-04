@@ -1,0 +1,5 @@
+<label for="data">Enter the data to be communicated to parent comp :</label>
+<input type="text" id="data" [(ngModel)] = 'data' #ref (input)="getData(ref.value)">
+<button class="btn btn-danger m-1" (click)="getUrData(ref.value)">Send data for sibling comp</button>
+<p>From parent : {{pData}}</p>
+

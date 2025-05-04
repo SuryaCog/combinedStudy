@@ -1,0 +1,22 @@
+<div class="container">
+    <div>
+        <a routerLink="/">back to home</a>
+    </div>
+    <br>
+    <h4 [style.color]="color">Click to change the colour. Type 1 //Property binding</h4>
+    <h2>In-build directives</h2>
+    <h4 [ngStyle]="{color: color}">Click to change the colour. Type 2 //ngStyle</h4>
+    
+    <button class="btn btn-primary m-1" (click)="color = 'red'">Red</button>
+    <button class="btn btn-primary m-1" (click)="color = 'blue'">Blue</button>
+    
+    <h4 [ngStyle]="{color: toggleColor ? 'pink' : 'purple'}">Click to change the colour. Type 3 //ngStyle</h4>
+    <h4 [ngClass]="toggleColor ? 'orange' : 'maroon'">Click to change the colour. Type 4 //ngClass</h4>
+    <button class="btn btn-primary" (click)="toggleColor = !toggleColor">Change color</button>
+    <br>
+    <br>
+    
+    <h2>Custom directive</h2>
+    <h3 customdr style="cursor: pointer;">Custom directive applied.. Click on this text</h3>
+</div>
+
